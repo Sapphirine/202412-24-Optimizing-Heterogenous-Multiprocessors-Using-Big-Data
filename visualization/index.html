@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Pre-PPO and Post-PPO Visualizations</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .chart-container {
+            margin: 20px auto;
+            max-width: 900px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combined Pre-PPO and Post-PPO Visualizations</h1>
+
+    <div class="chart-container">
+        <h2>Pre-PPO Dataset Analysis</h2>
+        <p style="text-align: center;">Explore IPC, memory usage, and cache hit rate trends for various algorithms.</p>
+        <div id="prePpoFilter"></div>
+        <div id="prePpoChart"></div>
+    </div>
+
+    <div class="chart-container">
+        <h2>Post-PPO Results</h2>
+        <p style="text-align: center;">Analyze PPO performance metrics and reward distributions over iterations.</p>
+        <div id="postPpoChart"></div>
+    </div>
+
+    <script src="enhanced_visualization.js"></script>
+</body>
+</html>
